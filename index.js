@@ -1,7 +1,7 @@
 var mysql = require('mysql')
 var connection = mysql.createConnection({
     host: 'localhost',
-    database: 'spotify',
+    database: 'smiledu',
     user: 'root',
     password: '',
 });
@@ -12,7 +12,7 @@ connection.connect(function (err) {
     }
     console.log('Estas conectado felicitaciones.. Tu ID de conexion es:' + connection.threadId);
 });
-connection.query('select * from temas_album', function (error, results) {
+connection.query('select * from estudiante', function (error, results) {
     if (error)
         throw error;
     results.forEach(result => {
